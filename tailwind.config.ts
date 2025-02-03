@@ -29,6 +29,10 @@ export default {
         },
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        poppins: ["Poppins, serif"],
+        openSans: ["Open Sans, serif"]
+      }
     },
   },
   plugins: [],
