@@ -22,3 +22,29 @@ body {
   -webkit-clip-path: polygon(0 0, 14% 0, 26% 100%, 0 100%);
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
+
+.designer-image{
+  height: calc(100vh - 80px);
+  /* max-width: 100%; */
+}
+
+@media screen and (min-width: 1024px) {
+  .designer-image{
+    width: 341px;
+  }
+  
+}
+
+@media screen and (min-width: 1280px) {
+  .designer-image{
+    width: 426px;
+  }
+  
+}
+
+@media screen and (min-width: 1440px) {
+  .designer-image{
+    width: 480px;
+  }
+  
+}
