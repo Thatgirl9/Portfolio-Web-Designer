@@ -1,8 +1,9 @@
+
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/context/themeContext";
-
-
+import SideBarNav from "@/components/SideBarNav";
+import ToggleButton from "@/components/ToggleButton";
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -16,13 +17,19 @@ export default function RootLayout({
 }>) {
   return (
     <ThemeProvider>
-    <html lang="en" className="dark">
-      <body
-        className={`antialiased`}
-      >
-        {children}
-      </body>
-    </html>
+      <html lang="en" className="dark">
+        <body
+          className={`antialiased flex bg-background-0 dark:bg-background-5 relative w-full`}
+        >
+          <div className="block lg:hidden absolute top-0 right-8 z-40">
+            <ToggleButton />
+          </div>
+          <main className="flex w-full lg:gap-10 xl:gap-16 lg:pr-9 lg:flex-row items-center justify-center lg:items-start lg:justify-normal flex-col border border-red-500">
+            <section className="flex-1 overflow-y-auto">{children}</section>
+            <SideBarNav />
+          </main>
+        </body>
+      </html>
     </ThemeProvider>
   );
 }

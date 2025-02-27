@@ -1,17 +1,27 @@
 "use client";
-import { useTheme } from '@/context/themeContext'
-import React from 'react'
+import { useTheme } from "@/context/themeContext";
+import React from "react";
+import { IoMoonOutline} from "react-icons/io5";
+import { BsSunFill } from "react-icons/bs";
 
 const ToggleButton = () => {
-  const {theme, toggleTheme} = useTheme();
+  const { theme, toggleTheme } = useTheme();
   return (
     <button
+      className={`toggleButton w-[50px] h-[50px] flex items-center justify-center mt-6 rounded-full dark:bg-background-7 ${
+        theme === "light" ? "bg-background-2 " : "bg-background-7"
+      }cursor-pointer`}
       onClick={toggleTheme}
-      className="p-2 rounded focus:outline-none bg-gray-200 dark:bg-gray-800"
     >
-      {theme === 'light' ? '🌞 Light Mode' : '🌙 Dark Mode'}
+      <span
+        className={`text-2xl ${
+          theme === "light" ? "text-primaryText-0" : "text-white"
+        } font-medium`}
+      >
+        {theme === "light" ? <IoMoonOutline /> : <BsSunFill />}
+      </span>
     </button>
   );
-}
+};
 
-export default ToggleButton
+export default ToggleButton;

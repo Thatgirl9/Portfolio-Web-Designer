@@ -23,14 +23,17 @@ body {
   box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
 }
 
-.designer-image{
+/* .designer-image{
   height: calc(100vh - 80px);
-  /* max-width: 100%; */
-}
+  /* max-width: 100%; 
+} */
+
+
 
 @media screen and (min-width: 1024px) {
   .designer-image{
     width: 341px;
+    height: calc(100vh - 80px);
   }
   
 }
@@ -40,11 +43,41 @@ body {
     width: 426px;
   }
   
+   .toggleButton{
+    position: absolute;
+    top:0;
+  }
 }
 
 @media screen and (min-width: 1440px) {
   .designer-image{
     width: 480px;
   }
+
+  .sideNav{
+    
+    /* position:relative; */
+    justify-content: center;
+    align-items: center;
+    /* gap: 80px; */
+  }
+
+ 
   
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 20px;
+}
+
