@@ -21,11 +21,11 @@ export default function RootLayout({
         <body
           className={`antialiased flex bg-background-0 dark:bg-background-5 relative w-full`}
         >
-          <div className="block lg:hidden absolute top-0 right-8 z-40">
+          <div className="block lg:hidden absolute top-0 right-6 sm:right-8 z-40">
             <ToggleButton />
           </div>
-          <main className="flex w-full lg:gap-10 xl:gap-16 lg:pr-9 lg:flex-row items-center justify-center lg:items-start lg:justify-normal flex-col border border-red-500">
-            <section className="flex-1 overflow-y-auto">{children}</section>
+          <main className="flex w-full lg:gap-10 xl:gap-16 lg:pr-9 lg:flex-row items-center justify-center lg:items-start lg:justify-normal flex-col">
+            <section className="flex-1 overflow-auto">{children}</section>
             <SideBarNav />
           </main>
         </body>

@@ -52,19 +52,19 @@ const SideBarNav = () => {
   ];
 
   return (
-    <div className=" flex flex-col gap-20 sideNav w-full lg:w-[51px] fixed bottom-0 lg:sticky lg:right-0 lg:top-0  border-2 border-pink-500 bg-black shadow-lg lg:bg-transparent z-70 pt-2 lg:pt-0">
+    <div className=" flex flex-col gap-20 lg:gap-20 xl:justify-center xl:gap-0 sideNav w-full lg:w-[51px] fixed bottom-0 lg:sticky lg:right-0 lg:bottom-0 lg:h-full dark:bg-background-8 dark:lg:bg-transparent bg-white shadow-xl lg:shadow-none dark:shadow-none lg:bg-transparent z-50 lg:pt-0">
       <div className="hidden lg:block">
         <ToggleButton/>
       </div>
       
       
 
-      <div className="flex flex-row justify-around lg:justify-normal lg:flex-col lg:gap-4 border border-black bg-black z-70">
+      <div className="flex flex-row justify-around lg:justify-normal lg:flex-col lg:gap-4 dark:lg:bg-transparent dark:bg-background-8  bg-white z-70 py-1 lg:bg-transparent lg:py-0">
         {navItems.map((item, index) => (
           <Link
             href={item.link}
             key={index}
-            className={`w-[50px] h-[50px] flex items-center justify-center rounded-full bg-background-2 dark:bg-background-8 cursor-pointer hover:bg-background-1 group ${
+            className={`w-[50px] h-[50px] flex items-center justify-center rounded-full bg-background-2 dark:bg-background-10 cursor-pointer hover:bg-background-1 group ${
               pathname === item.link
                 ? "!bg-background-1"
                 : "bg-background-2"

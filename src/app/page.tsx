@@ -5,19 +5,20 @@ import Author from "@/assets/albert-dera-ILip77SbmOE-unsplash.jpg";
 import { GoDash } from "react-icons/go";
 import { TiArrowRightThick } from "react-icons/ti";
 import * as motion from "motion/react-client";
+import { hover } from "motion";
 
 export default function Home() {
   return (
-    <main className="w-full min-h-full border border-blue-500 justify-center items-center flex lg:block">
-      <section className="w-[80%] lg:w-full relative flex justify-center items-center h-screen border border-red-500">
+    <main className="w-full lg:min-h-full justify-center items-center flex lg:block">
+      <section className="w-[80%] lg:w-full relative flex justify-center items-center lg:h-screen mt-10 mb-20 lg:mb-0 lg:mt-0">
         <div className="yellow-bg hidden lg:block"></div>
 
-        <div className="lg:z-30 flex items-center text-center justify-center lg:flex-row flex-col gap-7 lg:gap-10 xl:justify-between  2xl:justify-stretch w-full lg:pl-9 lg:text-left">
-          <aside className="lg:rounded-[30px] z-30 rounded-full ">
+        <div className="lg:z-30 flex items-center text-center justify-center lg:flex-row flex-col gap-7 lg:gap-10 xl:justify-stretch  2xl:justify-stretch w-full lg:pl-9 lg:text-left">
+          <aside className="lg:rounded-[30px] z-30 rounded-full border-[3px] lg:border-none border-background-9 dark:border-background-8 ">
             <Image
               src={Author}
               alt="A Web Designer"
-              className="max-w-[850px] max-lg:[250px] w-[250px] h-[250px] rounded-full lg:rounded-[30px] designer-image bg-cover dark:shadow-2xl border-1 border-background-2 lg:border-none"
+              className="max-w-[850px] max-lg:[250px] w-[250px] h-[250px] rounded-full lg:rounded-[30px] designer-image bg-cover dark:lg:shadow-2xl"
               loading="lazy"
             />
           </aside>
@@ -27,7 +28,7 @@ export default function Home() {
               <span className="hidden xl:inline-block">
                 <GoDash className="text-6xl text-background-1" />
               </span>
-              <h1 className="text-4xl lg:text-[51px] leading-tight font-bold text-center w-full">
+              <h1 className="text-2xl sm:text-4xl lg:text-[51px] lg:leading-[1.1] font-bold text-center lg:text-left w-full">
                 <span className="text-background-1">
                   I&apos;m steve milner.
                 </span>
@@ -38,6 +39,69 @@ export default function Home() {
               </h1>
             </div>
 
+            <p className="lg:w-[48ch] xl:w-[60ch] text-primaryText-0 dark:text-white text-sm md:text-base font-normal font-openSans leading-[2]">
+              I&apos;m a Tunisian based web designer & front‑end developer
+              focused on crafting clean & user‑friendly experiences, I am
+              passionate about building excellent software that improves the
+              lives of those around me.
+            </p>
+
+            <motion.button
+              className="relative overflow-hidden bg-transparent border pl-6 rounded-full w-[229px] h-[54px] uppercase border-background-1 text-primaryText-0 dark:text-white font-poppins font-semibold flex justify-between items-center hover:text-background-0"
+              whileHover="hover"
+              whileTap={{ scale: 0.95 }}
+              initial="rest"
+            >
+              <motion.div
+                className="absolute top-0 bottom-0 right-0 bg-background-1 rounded-full"
+                initial={{ width: "55px" }}
+                variants={{
+                  hover: {
+                    width: "100%",
+                    transition: { duration: 0.4, ease: "easeInOut" },
+                  },
+                  tap: {
+                    width: "100%",
+                    transition: { duration: 0.4, ease: "easeInOut" },
+                  },
+                }}
+              />
+              <span className="relative z-10">More about me</span>
+              <div className="relative z-10 bg-background-1 h-[53px] w-[55px] rounded-full flex items-center justify-center">
+                <TiArrowRightThick className="text-2xl text-background-0" />
+              </div>
+            </motion.button>
+
+            {/* <p className="lg:w-[48ch] xl:w-[60ch] text-primaryText-0 dark:text-white xl:text-base font-normal font-openSans leading-[2]">
+              I&apos;m a Tunisian based web designer & front‑end developer
+              focused on crafting clean & user‑friendly experiences, I am
+              passionate about building excellent software that improves the
+              lives of those around me.
+            </p>
+
+            <motion.button
+              className="relative overflow-hidden bg-transparent border pl-6 rounded-full w-[229px] h-[54px] uppercase border-background-1 text-primaryText-0 dark:text-white font-poppins font-semibold flex justify-between items-center hover:text-background-0"
+              whileHover="hover"
+              whileTap={{ scale: 0.95 }}
+              initial="rest"
+            >
+              <motion.div
+                className="absolute top-0 bottom-0 right-0 bg-background-1 rounded-full"
+                initial={{ width: "55px" }}
+                variants={{
+                  hover: {
+                    width: "100%",
+                    transition: { duration: 0.4, ease: "easeInOut" },
+                  },
+                }}
+              />
+              <span className="relative z-10">More about me</span>
+              <div className="relative z-10 bg-background-1 h-[53px] w-[55px] rounded-full flex items-center justify-center">
+                <TiArrowRightThick className="text-2xl text-background-0" />
+              </div>
+            </motion.button>
+
+
             <p className="lg:w-[48ch] xl:w-[60ch] text-primaryText-0 dark:text-white xl:text-base font-normal font-openSans leading-[2]">
               I&apos;m a Tunisian based web designer & front‑end developer
               focused on crafting clean & user‑friendly experiences, I am
@@ -94,66 +158,7 @@ export default function Home() {
               <div className="relative z-10 bg-background-1 h-[53px] w-[55px] rounded-full flex items-center justify-center">
                 <TiArrowRightThick className="text-2xl text-background-0" />
               </div>
-            </motion.button>
-
-
-            <p className="lg:w-[48ch] xl:w-[60ch] text-primaryText-0 dark:text-white xl:text-base font-normal font-openSans leading-[2]">
-              I&apos;m a Tunisian based web designer & front‑end developer
-              focused on crafting clean & user‑friendly experiences, I am
-              passionate about building excellent software that improves the
-              lives of those around me.
-            </p>
-
-            <motion.button
-              className="relative overflow-hidden bg-transparent border pl-6 rounded-full w-[229px] h-[54px] uppercase border-background-1 text-primaryText-0 dark:text-white font-poppins font-semibold flex justify-between items-center hover:text-background-0"
-              whileHover="hover"
-              whileTap={{ scale: 0.95 }}
-              initial="rest"
-            >
-              <motion.div
-                className="absolute top-0 bottom-0 right-0 bg-background-1 rounded-full"
-                initial={{ width: "55px" }}
-                variants={{
-                  hover: {
-                    width: "100%",
-                    transition: { duration: 0.4, ease: "easeInOut" },
-                  },
-                }}
-              />
-              <span className="relative z-10">More about me</span>
-              <div className="relative z-10 bg-background-1 h-[53px] w-[55px] rounded-full flex items-center justify-center">
-                <TiArrowRightThick className="text-2xl text-background-0" />
-              </div>
-            </motion.button>
-
-            <p className="lg:w-[48ch] xl:w-[60ch] text-primaryText-0 dark:text-white xl:text-base font-normal font-openSans leading-[2]">
-              I&apos;m a Tunisian based web designer & front‑end developer
-              focused on crafting clean & user‑friendly experiences, I am
-              passionate about building excellent software that improves the
-              lives of those around me.
-            </p>
-
-            <motion.button
-              className="relative overflow-hidden bg-transparent border pl-6 rounded-full w-[229px] h-[54px] uppercase border-background-1 text-primaryText-0 dark:text-white font-poppins font-semibold flex justify-between items-center hover:text-background-0"
-              whileHover="hover"
-              whileTap={{ scale: 0.95 }}
-              initial="rest"
-            >
-              <motion.div
-                className="absolute top-0 bottom-0 right-0 bg-background-1 rounded-full"
-                initial={{ width: "55px" }}
-                variants={{
-                  hover: {
-                    width: "100%",
-                    transition: { duration: 0.4, ease: "easeInOut" },
-                  },
-                }}
-              />
-              <span className="relative z-10">More about me</span>
-              <div className="relative z-10 bg-background-1 h-[53px] w-[55px] rounded-full flex items-center justify-center">
-                <TiArrowRightThick className="text-2xl text-background-0" />
-              </div>
-            </motion.button>
+            </motion.button> */}
           </article>
 
           {/* <SideBarNav /> */}

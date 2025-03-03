@@ -23,6 +23,7 @@ export default {
           7: "#4b4b4b",
           8: "#2b2a2a",
           9: "#dddddd",
+          10: "#444444",
         },
         primaryText: {
           0: "#666666",
@@ -33,7 +34,10 @@ export default {
       },
       fontFamily: {
         poppins: ["Poppins, serif"],
-        openSans: ["Open Sans, serif"]
+        openSans: ["Open Sans, serif"],
+      },
+      boxShadow: {
+        xl: "0 0px 47px 0px rgb(222, 222, 222)",
       }
     },
   },
